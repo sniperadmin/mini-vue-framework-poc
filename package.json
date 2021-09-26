@@ -1,0 +1,11 @@
+{
+  "name": "mini-vue",
+  "version": "1.0.0",
+  "description": "a mini Vue framework",
+  "main": "src/app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  }
+}
