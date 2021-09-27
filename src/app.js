@@ -1,6 +1,6 @@
-import {reactive, h, mountApp } from "../index"
+import {reactive, h } from "../index"
 
-let app = {
+export default {
   // NOTE: Basic reactivity system done~!
   data: reactive({
     count: 0
@@ -18,5 +18,3 @@ let app = {
     )
   }
 }
-
-mountApp(app, document.querySelector('#app'))
