@@ -7,5 +7,8 @@
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@marp-team/marp-cli": "^1.4.1"
   }
 }

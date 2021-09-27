@@ -1,0 +1,37 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add global @marp-team/marp-cli
+
+PATH: 
+  C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\Nasr\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Nasr\AppData\Local\Programs\Python\Python38\;C:\Program Files\ImageMagick-7.0.8-Q16;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\AdoptOpenJDK\jdk8u192-b12\bin;C:\Program Files\Java\jdk1.8.0_231\bin;C:\Android\android-sdk\tools;C:\Android\android-sdk\platform-tools;C:\Android\android-sdk\tools\bin;C:\Program Files\OpenJDK\jdk-13.0.2\bin;C:\Users\Nasr\Desktop\python-projects;D:\program files x64\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\wamp64\bin\php\php8.0.6;C:\ProgramData\ComposerSetup\bin;C:\Program Files\CMake\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\dotnet\;C:\Users\Nasr\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Nasr\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Nasr\AppData\Local\Programs\Python\Python37-32\;C:\Users\Nasr\AppData\Local\Microsoft\WindowsApps;C:\Program Files\heroku\bin;C:\Users\Nasr\AppData\Local\Yarn\bin;C:\flutter\bin;C:\wamp64\bin\php\php7.3.5;C:\Users\Nasr\AppData\Local\gitkraken\bin;C:\Users\Nasr\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\Nasr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Nasr\AppData\Roaming\Composer\vendor\bin;D:\nasr\development projects\laravel-vue\vendor\bin;C:\Users\Nasr\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PostgreSQL\13\bin;C:\Program Files\PostgreSQL\13\lib;C:\Users\Nasr\AppData\Roaming\npm;C:\Users\Nasr\AppData\Roaming\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  14.17.6
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: read ECONNRESET
+      at TLSWrap.onStreamRead (internal/stream_base_commons.js:209:20)
+
+npm manifest: 
+  {
+    "name": "mini-vue",
+    "version": "1.0.0",
+    "description": "a mini Vue framework",
+    "main": "src/app.js",
+    "license": "MIT",
+    "scripts": {
+      "start": "parcel index.html --open",
+      "build": "parcel build index.html"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
