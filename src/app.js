@@ -1,4 +1,4 @@
-import {reactive, h } from "../index"
+import { reactive, h } from "../index"
 
 export default {
   // NOTE: Basic reactivity system done~!
@@ -16,5 +16,17 @@ export default {
         h('h1', { class: 'red' }, String(this.data.count)),
       ]
     )
+
+    // const template = `
+    //   <div class="container">
+    //     <button class="btn btn-primary">
+    //       <span class="red">
+    //         adfafdaf
+    //       </span>
+    //     </button>
+    //   </div>
+    // `
+
+    // return template;
   }
 }

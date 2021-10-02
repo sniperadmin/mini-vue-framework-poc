@@ -21,10 +21,19 @@ export function mount(vnode, container) {
     if (typeof vnode.children === 'string') {
       el.textContent = vnode.children
     } else {
-      vnode.children.forEach(child => {
-        mount(child, el)
+      vnode.children.map(child => {
+        if (child.type) {
+          el.textContent = child.data
+        } else {
+          mount(child, el)
+        }
       })
     }
+    // else {
+    //   vnode.children.forEach(child => {
+    //     mount(child, el)
+    //   })
+    // }
   }
   // SECTION: ./checking children
 

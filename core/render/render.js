@@ -1,21 +1,6 @@
 import parse from 'html-dom-parser';
 import deIndent from 'de-indent';
 
-const firstName = "Marvin";
-const lastName = "Frachet";
-const template = `
-  <div>
-    <p class="red">
-      Hello ${firstName} ${lastName}!
-    </p>
-    <span>
-      meow
-    </span>
-  </div>
-`
-
-
-parseHTML(template)
 
 function hydrateNodes(dom) {
   if (dom) {
@@ -33,7 +18,7 @@ function hydrateNodes(dom) {
 
 
 
-export function parseHTML(template) {
+export function parseComponent(template) {
   const cleanCode = deIndent(template);
   const parsedTemplate = parse(cleanCode, 'text/html')
 
@@ -50,14 +35,13 @@ export function parseHTML(template) {
 export function h(tag, props, children) {
   const hydratedChildren = children
 
-  hydratedChildren.forEach(c => {
-    if (c.type === 'tag') {
-      hydratedChildren[hydratedChildren.indexOf(c)] = h(c.name, c.attribs, c.children)
-    } else if (c.type === 'text') {
-      console.log(c.data);
-      hydratedChildren[hydratedChildren.indexOf(c)] = c.data
-    }
-  })
+  if (typeof hydratedChildren !== 'string') {
+    hydratedChildren.forEach(c => {
+      if (c.type && c.type === 'tag') {
+        hydratedChildren[hydratedChildren.indexOf(c)] = h(c.name, c.attribs, c.children)
+      }
+    })
+  }
 
   return {
     tag,
