@@ -9,6 +9,9 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@marp-team/marp-cli": "^1.4.1"
+    "@babel/parser": "^7.15.7",
+    "@marp-team/marp-cli": "^1.4.1",
+    "de-indent": "^1.0.2",
+    "html-dom-parser": "^1.0.2"
   }
 }
