@@ -29,11 +29,6 @@ export function mount(vnode, container) {
         }
       })
     }
-    // else {
-    //   vnode.children.forEach(child => {
-    //     mount(child, el)
-    //   })
-    // }
   }
   // SECTION: ./checking children
 

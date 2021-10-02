@@ -1,10 +1,31 @@
+/**
+ * @file handles all the rendering mechanism
+ * for the dom string and converts it into a readable data structure
+ * for other methods to consume
+ * 
+ * 
+ * 
+ * 
+ * 
+ * NOTE: For the String template literals, This version handles
+ * only one parent with children
+ * 
+ * TODO: Add more mechanics for handling more than one parent
+ * at the same object level
+ */
+
 import parse from 'html-dom-parser';
 import deIndent from 'de-indent';
 
-
-function hydrateNodes(dom) {
-  if (dom) {
-    const nodes = dom.filter(node => !(node.data && node.data === '\n' || node.data === '\n  '))
+/** private helper function to loop the parsed dom
+ * using html-dom-parser and clean it up
+ * @function hydrateNodes
+ * 
+ * @param domString
+ */
+function hydrateNodes(domString) {
+  if (domString) {
+    const nodes = domString.filter(node => !(node.data && node.data === '\n' || node.data === '\n  '))
 
     nodes.forEach(node => {
       if (node.childNodes) {
@@ -17,7 +38,13 @@ function hydrateNodes(dom) {
 }
 
 
-
+/**
+ * NOTE: define our method for capturing and generating
+ * nodes from a template string
+ * @function parseComponent
+ * @param template => should be HTML template
+ * @returns {function h}
+ */
 export function parseComponent(template) {
   const cleanCode = deIndent(template);
   const parsedTemplate = parse(cleanCode, 'text/html')
@@ -31,7 +58,16 @@ export function parseComponent(template) {
   return h(tag, props, children)
 }
 
-
+/**
+ * NOTE: define our method for converting
+ * nodes into a data structure
+ * @function h
+ * @param tag
+ * @param props
+ * @param children => [{ tag: '', props: {}, children: []}, { type: 'text', data: string }]
+ *
+ * @returns { object } contains all the processed params
+ */
 export function h(tag, props, children) {
   const hydratedChildren = children
 
